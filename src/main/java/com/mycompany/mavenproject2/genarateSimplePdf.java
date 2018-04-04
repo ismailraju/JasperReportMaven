@@ -21,19 +21,23 @@ import net.sf.jasperreports.engine.JasperReport;
  * @author ismail
  */
 public class genarateSimplePdf {
-    
-    public static void main(String[] args) throws JRException{
-        
-        JasperReport jasperReport= JasperCompileManager.compileReport( "/home/ismail/NetBeansProjects/mavenproject2/src/main/java/com/mycompany/mavenproject2/SimpleReport.jrxml");
-        
-        JRDataSource jRDataSource=new JREmptyDataSource();
-        
-        Map<String,Object> parameter=new HashMap<String, Object>();
+
+    private static String jrxmlFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/SimpleReport.jrxml";
+    private static String jasperFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/SimpleReport.jasper";
+    private static String pdfFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/SimpleReport.pdf";
+
+    public static void main(String[] args) throws JRException {
+        HashMap hm = null;
+        JasperReport jasperReport = JasperCompileManager.compileReport(jrxmlFileName);
+
+        JRDataSource jRDataSource = new JREmptyDataSource();
+
+        Map<String, Object> parameter = new HashMap<String, Object>();
         parameter.put("name", "raju");
         parameter.put("address", "rdfhgdsfghdfhaju");
-        
-        JasperPrint jasperPrint=JasperFillManager.fillReport(jasperReport,parameter, jRDataSource);
-        JasperExportManager.exportReportToPdfFile(jasperPrint, "/home/ismail/NetBeansProjects/mavenproject2/src/main/java/com/mycompany/mavenproject2/SimpleReport.pdf");
+
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameter, jRDataSource);
+        JasperExportManager.exportReportToPdfFile(jasperPrint, pdfFileName);
     }
-    
+
 }
