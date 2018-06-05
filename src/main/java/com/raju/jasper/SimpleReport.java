@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavenproject2;
+package com.raju.jasper;
 
 import java.util.HashMap;
 import javax.swing.table.DefaultTableModel;
@@ -18,15 +18,14 @@ import net.sf.jasperreports.view.JasperViewer;
 public class SimpleReport {
 
     DefaultTableModel tableModel;
-
-    private static String jrxmlFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/newReport.jrxml";
-    private static String jasperFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/newReport.jasper";
-    private static String pdfFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/newReport.pdf";
+    private static String jrxmlFileName = "/home/ismail/NetBeansProjects/jasper/jasperDemoMaven/src/main/java/com/raju/jasper/newReport.jrxml";
+    private static String jasperFileName = "/home/ismail/NetBeansProjects/jasper/jasperDemoMaven/src/main/java/com/raju/jasper/newReport.jasper";
+    private static String pdfFileName = "/home/ismail/NetBeansProjects/jasper/jasperDemoMaven/src/main/java/com/raju/jasper/newReport.pdf";
 
     public SimpleReport() {
         JasperPrint jasperPrint = null;
 //        TableModelData();
-        String[] columnNames = {"Id", "Name", "Department", "Email"};
+        String[] columnNames = {"COLUMN0", "COLUMN1", "COLUMN2", "COLUMN3"};
         String[][] data = {
             {"111", "G Conger", " Orthopaedic", "jim@wheremail.com"},
             {"222", "A Date", "ENT", "adate@somemail.com"},

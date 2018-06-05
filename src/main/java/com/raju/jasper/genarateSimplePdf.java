@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.mavenproject2;
+package com.raju.jasper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,9 +22,9 @@ import net.sf.jasperreports.engine.JasperReport;
  */
 public class genarateSimplePdf {
 
-    private static String jrxmlFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/SimpleReport.jrxml";
-    private static String jasperFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/SimpleReport.jasper";
-    private static String pdfFileName = "/home/ismailu/NetBeansProjects/JasperReportMaven/src/main/java/com/mycompany/mavenproject2/SimpleReport.pdf";
+    private static String jrxmlFileName = "/home/ismail/NetBeansProjects/jasper/jasperDemoMaven/src/main/java/com/raju/jasper/SimpleReport.jrxml";
+    private static String jasperFileName = "/home/ismail/NetBeansProjects/jasper/jasperDemoMaven/src/main/java/com/raju/jasper/SimpleReport.jasper";
+    private static String pdfFileName = "/home/ismail/NetBeansProjects/jasper/jasperDemoMaven/src/main/java/com/raju/jasper/SimpleReport.pdf";
 
     public static void main(String[] args) throws JRException {
         HashMap hm = null;
@@ -33,7 +33,11 @@ public class genarateSimplePdf {
         JRDataSource jRDataSource = new JREmptyDataSource();
 
         Map<String, Object> parameter = new HashMap<String, Object>();
-        parameter.put("name", "raju");
+        parameter.put("COLUMN_0", "raju");
+        parameter.put("COLUMN_1", "raju");
+        parameter.put("COLUMN_2", "raju");
+        parameter.put("COLUMN_3", "raju");
+        parameter.put("COLUMN_0", "raju");
         parameter.put("address", "rdfhgdsfghdfhaju");
 
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameter, jRDataSource);
