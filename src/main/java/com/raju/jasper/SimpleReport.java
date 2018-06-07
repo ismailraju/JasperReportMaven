@@ -41,7 +41,7 @@ public class SimpleReport {
         };
 
         try {
-            JasperCompileManager.compileReportToFile(jrxmlFileName);
+           // JasperCompileManager.compileReportToFile(jrxmlFileName);
             jasperPrint = JasperFillManager.fillReport(jasperFileName, new HashMap<>(),
                     new JRTableModelDataSource(new DefaultTableModel(data, columnNames)));
             JasperViewer jasperViewer = new JasperViewer(jasperPrint);
